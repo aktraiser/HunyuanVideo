@@ -6,6 +6,7 @@ from datetime import datetime
 
 from hyvideo.utils.file_utils import save_videos_grid
 from hyvideo.config import parse_args
+from hyvideo.prompt_rewrite import get_rewrite_prompt
 from hyvideo.inference import HunyuanVideoSampler
 
 
