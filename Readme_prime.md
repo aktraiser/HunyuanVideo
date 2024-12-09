@@ -16,8 +16,20 @@ cd HunyuanVideo
 
 ### 1.2 Lancer le conteneur Docker
 ```
-bash
+apt-get update
+apt-get upgrade -y
+
+apt-get install -y \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    software-properties-common \
+    gnupg
+
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+
 docker pull hunyuanvideo/hunyuanvideo:cuda_12
+
 docker run -itd \
 --gpus all \
 --init \
